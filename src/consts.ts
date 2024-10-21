@@ -9,12 +9,13 @@ export const SITE: Site = {
 
 export const HOME: Metadata = {
   TITLE: "Início",
-  DESCRIPTION: "Astro Micro is an accessible theme for Astro.",
+  DESCRIPTION:
+    "Esse é um pequeno espaço onde estarei trazendo alguns dos conteúdos que tenho estudado recentemente.",
 };
 
 export const BLOG: Metadata = {
   TITLE: "Blog",
-  DESCRIPTION: "A collection of articles on topics I am passionate about.",
+  DESCRIPTION: "Artigos que escrevi.",
 };
 
 export const SOCIALS: Socials = [

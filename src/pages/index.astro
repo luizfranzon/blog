@@ -5,11 +5,15 @@ import { SITE, HOME, SOCIALS } from "@consts";
 import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
+import { differenceInYears } from 'date-fns'
 
 const blog = (await getCollection("blog"))
-  .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .filter((post: any) => !post.data.draft)
+  .sort((a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+
+const birthDate = new Date("2003-08-05");
+const currentAge = differenceInYears(new Date(), birthDate);
 
 ---
 
@@ -17,45 +21,25 @@ const blog = (await getCollection("blog"))
   <Container>
     <aside data-pagefind-ignore>
       <h1 class="font-semibold text-black dark:text-white">
-        Introducing Astro Micro
+        Uma pequena introdução <span class="waving-hand-animation text-xl">👋</span>
       </h1>
       <div class="space-y-16">
         <section>
           <article class="space-y-4">
             <span>
-              <p>
-                Astro Micro is an accessible theme for <Link
-                  href="https://astro.build/">Astro</Link
-                >. It's a fork of
-                <Link href="https://github.com/markhorn-dev">
-                  Mark Horn's
-                </Link> popular theme <Link
-                  href="https://astro.build/themes/details/astronano/"
-                  >Astro Nano</Link
-                >. Like Nano, Micro comes with zero frameworks installed.
+              <br>
+                Olá! </br> Meu nome é <strong>Luiz Fernando</strong>, tenho <strong>{currentAge} anos</strong>, e atualmente trabalho como desenvolvedor de software.
               </p>
               <p>
-                Micro adds features like <Link href="https://pagefind.app/"
-                  >Pagefind</Link
-                > for search, <Link href="https://giscus.app">Giscus</Link> for comments,
-                and more. For a full list of changes, see this <Link
-                  href="/blog/00-micro-changelog">blog post</Link
-                >.
+                Resolvi criar esse blog para compartilhar um pouco das coisas que venho aprendendo e estudando, tanto quanto também alguns outros assuntos que me interessam.
               </p>
             </span>
             <span class="animate">
               <p>
-                Micro still comes with everything great about Nano — full type
-                safety, a sitemap, an RSS feed, and Markdown + MDX support.
-                Styled with TailwindCSS and preconfigured with system, light,
-                and dark themes.
+                Sinta-se livre para apontar qualquer erro ou sugerir melhorias nos posts.
               </p>
               <p>
-                Visit
-                <Link href="https://github.com/trevortylerlee/astro-micro">
-                  Astro Micro on GitHub
-                </Link>
-                to fork the repository to get started.
+                Blog criado utilizando <strong>Astro</strong> com o tema <Link  href="https://astro.build/themes/details/astro-micro/" external>Astro Micro</Link>.
               </p>
             </span>
           </article>
