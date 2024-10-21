@@ -2,7 +2,8 @@ import type { Metadata, Site, Socials } from "@types";
 
 export const SITE: Site = {
   TITLE: "luizfranzon.dev",
-  DESCRIPTION: "Astro Micro is an accessible and lightweight blog.",
+  DESCRIPTION:
+    "Pequeno blog para compartilhar um pouco das coisas que venho aprendendo e estudando",
   EMAIL: "luizfranzon05@hotmail.com",
   NUM_POSTS_ON_HOMEPAGE: 3,
 };
