@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { formatDate } from "date-fns";
 
 type Props = {
   entry: CollectionEntry<"blog">
@@ -20,6 +21,9 @@ const { entry } = Astro.props as {
     </div>
     <div class="text-sm">
       {entry.data.description}
+      <div class="flex items-center gap-4" >
+        <datetime>{formatDate(entry.data.date, "dd/MM/yyyy")}</datetime>
+      </div>
     </div>
   </div>
   <svg

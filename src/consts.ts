@@ -4,7 +4,7 @@ export const SITE: Site = {
   TITLE: "luizfranzon.dev",
   DESCRIPTION: "Astro Micro is an accessible and lightweight blog.",
   EMAIL: "luizfranzon05@hotmail.com",
-  NUM_POSTS_ON_HOMEPAGE: 5,
+  NUM_POSTS_ON_HOMEPAGE: 3,
 };
 
 export const HOME: Metadata = {
