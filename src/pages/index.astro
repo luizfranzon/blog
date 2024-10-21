@@ -21,14 +21,14 @@ const currentAge = differenceInYears(new Date(), birthDate);
   <Container>
     <aside data-pagefind-ignore>
       <h1 class="font-semibold text-black dark:text-white">
-        Uma pequena introdução <span class="waving-hand-animation text-xl">👋</span>
+        Uma pequena introdução...
       </h1>
       <div class="space-y-16">
         <section>
-          <article class="space-y-4">
+          <article class="space-y-4 rounded-lg">
             <span>
               <br>
-                Olá! </br> Meu nome é <strong>Luiz Fernando</strong>, tenho <strong>{currentAge} anos</strong>, e atualmente trabalho como desenvolvedor de software.
+                Olá! <span class="waving-hand-animation text-xl">👋</span> </br> Meu nome é <strong>Luiz Fernando Franzon</strong>, tenho <strong>{currentAge} anos</strong>, e atualmente trabalho como desenvolvedor de software.
               </p>
               <p>
                 Resolvi criar esse blog para compartilhar um pouco das coisas que venho aprendendo e estudando, tanto quanto também alguns outros assuntos que me interessam.
@@ -38,8 +38,8 @@ const currentAge = differenceInYears(new Date(), birthDate);
               <p>
                 Sinta-se livre para apontar qualquer erro ou sugerir melhorias nos posts.
               </p>
-              <p>
-                Blog criado utilizando <strong>Astro</strong> com o tema <Link  href="https://astro.build/themes/details/astro-micro/" external>Astro Micro</Link>.
+              <p class="italic">
+                Blog criado utilizando <strong>Astro</strong> com o tema <Link  href="https://astro.build/themes/details/astro-micro/" external>Astro Micro</Link> com algumas alterações minhas.
               </p>
             </span>
           </article>
@@ -48,9 +48,9 @@ const currentAge = differenceInYears(new Date(), birthDate);
         <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
             <h2 class="font-semibold text-black dark:text-white">
-              Latest posts
+              Últimos posts
             </h2>
-            <Link href="/blog"> See all posts </Link>
+            <Link href="/blog"> Ver todos os posts </Link>
           </div>
           <ul class="not-prose flex flex-col gap-4">
             {
@@ -65,12 +65,12 @@ const currentAge = differenceInYears(new Date(), birthDate);
 
         <section class="animate space-y-4">
           <h2 class="font-semibold text-black dark:text-white">
-            Let's Connect
+            Entre em contato ✉️
           </h2>
           <article>
             <p>
-              If you want to get in touch with me about something or just to say
-              hi, reach out on social media or send me an email.
+              Se você quiser entrar em contato comigo sobre algo ou apenas para dizer
+              oi, entre em contato nas redes sociais ou me envie um email.
             </p>
           </article>
           <ul class="not-prose flex flex-wrap gap-2">
